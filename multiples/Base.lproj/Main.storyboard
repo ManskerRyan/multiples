@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="101" id="0MS-03-Urk"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Numbrt here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-jj-DS0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-jj-DS0">
                                 <rect key="frame" x="188" y="254" width="225" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="6zy-xm-5pp"/>
@@ -45,6 +45,9 @@
                                     <constraint firstAttribute="width" constant="225" id="ouM-xg-UzM"/>
                                 </constraints>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6L-Kn-2AC"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldh-0w-xtY">
                                 <rect key="frame" x="195" y="368" width="211" height="101"/>
@@ -53,15 +56,18 @@
                                     <constraint firstAttribute="height" constant="101" id="Z70-73-nFJ"/>
                                 </constraints>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="addBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uij-ja-0kP"/>
+                                </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5 + 20 = 25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryF-cy-2zy">
-                                <rect key="frame" x="40" y="137" width="520" height="51"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 + 20 = 25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryF-cy-2zy">
+                                <rect key="frame" x="40" y="137" width="520" height="48"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" red="0.99545975130890052" green="0.99545975130890052" blue="0.99545975130890052" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press ADD to continue!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgT-5j-eEe">
-                                <rect key="frame" x="40" y="137" width="520" height="51"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press ADD to continue!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgT-5j-eEe">
+                                <rect key="frame" x="40" y="137" width="520" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -92,6 +98,14 @@
                             <constraint firstItem="NgT-5j-eEe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="y37-yp-oqR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addBtn" destination="ldh-0w-xtY" id="OS8-IX-LHl"/>
+                        <outlet property="addTextLbl" destination="ryF-cy-2zy" id="JJH-QD-et8"/>
+                        <outlet property="initTextLbl" destination="NgT-5j-eEe" id="25L-n0-GTe"/>
+                        <outlet property="logoImg" destination="XMc-hi-RV6" id="Ebl-51-aYZ"/>
+                        <outlet property="numberBoxTxt" destination="vqY-jj-DS0" id="Qsl-hr-JQw"/>
+                        <outlet property="playBtn" destination="HuL-1h-daC" id="5GW-Xj-awc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
